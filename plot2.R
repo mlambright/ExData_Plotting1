@@ -4,7 +4,7 @@ run <- function() {
   housePower <- housePower[housePower$Date %in% allowedDates,]
   housePower$Date <- strptime(paste(housePower$Date, housePower$Time), '%d/%m/%Y %H:%M:%S')
     
-  png('plot2.png')
+  png('plot2.png', bg='transparent')
   plot(housePower$Date, y=as.numeric(housePower$Global_active_power), xlab='', type='n', ylab='Global Active Power (kilowatts)')
   lines(housePower$Date, as.numeric(housePower$Global_active_power))  
   dev.off()

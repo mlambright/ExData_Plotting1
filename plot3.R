@@ -4,7 +4,7 @@ run <- function() {
   housePower <- housePower[housePower$Date %in% allowedDates,]
   housePower$Date <- strptime(paste(housePower$Date, housePower$Time), '%d/%m/%Y %H:%M:%S')
   
-  png('plot3.png')
+  png('plot3.png', bg='transparent')
   plot(housePower$Date, y=as.numeric(housePower$Sub_metering_1), xlab='', ylab='Energy sub metering', type='n')
   lines(housePower$Date, as.numeric(housePower$Sub_metering_1))
   lines(housePower$Date, as.numeric(housePower$Sub_metering_2), col='red')

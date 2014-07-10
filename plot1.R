@@ -4,7 +4,7 @@ run <- function() {
   allowedDates <- strptime(c('1/2/2007', '2/2/2007'),'%d/%m/%Y')
   housePower <- housePower[housePower$Date %in% allowedDates,]
   
-  png('plot1.png')
+  png('plot1.png', bg='transparent')
   hist(as.numeric(housePower$Global_active_power), col='red', 
        xlab='Global Active Power (kilowatts)', ylab='Frequency', 
        main='Global Active Power', breaks=seq(0,8,0.5), 
