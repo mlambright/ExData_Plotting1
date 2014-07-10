@@ -9,4 +9,3 @@ run <- function() {
   lines(housePower$Date, as.numeric(housePower$Global_active_power))  
   dev.off()
 }
-

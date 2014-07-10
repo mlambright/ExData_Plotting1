@@ -14,5 +14,3 @@ run <- function() {
   
   dev.off()
 }
-
-
